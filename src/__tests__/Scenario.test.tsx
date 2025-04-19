@@ -8,7 +8,7 @@ import userEvent from '@testing-library/user-event'
 const renderWithUser = (ui: React.ReactNode) => {
     const user = userEvent.setup()
     render(ui)
-    
+
     return { user }
 }
 
@@ -40,7 +40,7 @@ describe('Modal', () => {
         expect(mockClose).toHaveBeenCalledTimes(1);
       });
   
-      test('calls onClock action when clicking outside of the modal', async () => {
+      test('calls onClose action when clicking outside of the modal', async () => {
         const { user } = renderWithUser(<Scenario data-testid="mockId" onClose={mockClose} />);
         const scrimElement = screen.getByTestId('mockId');
         await user.click(scrimElement);
