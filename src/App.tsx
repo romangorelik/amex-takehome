@@ -1,10 +1,8 @@
-import './App.css'
-import Scenario from './components/Scenario'
+import "./App.css";
+import Scenario from "./components/Scenario";
 
 function App() {
-  return (
-    <Scenario />
-  )
+  return <Scenario />;
 }
 
-export default App
+export default App;
