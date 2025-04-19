@@ -31,3 +31,4 @@ AssertionError: expected "spy" to be called 1 times, but got 2 times
 
 
  // If more time than I will add husky to run prettier and ES lint on git hooks
+ // clean up testing folder and have more structure
