@@ -21,3 +21,4 @@ Steps:
 11. Create Scenario component that takes in an onClose function and a data-testId based on the tests written.
   - Create the open state, create a handleClose function to close modal and call onClose prop, put a null state when modal is closed
 12. Had a bug running toBeInTheDocument, where document was not defined. Research online said to update vite.config.ts with jsdom and install jsdom; now should be running correctly.
+13. Add escape key connection to onClose function, however it seems to have broken test #3 where it was working before that change
