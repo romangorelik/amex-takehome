@@ -13,8 +13,7 @@ interface IScenarioProps {
 }
 
 const Scenario = ({ onClose, "data-testid": testId, header }: IScenarioProps) => {
-  
-  // Need a state to know when the Modal is closed or open. Determines if modal is rendered or not. Default state is true  
+  // Need a state to know when the Modal is closed or open. Determines if modal is rendered or not. Default state is true
   const [open, setIsOpen] = useState(true);
 
   // Usecallback is used so that if onClose is the same then we do not rerender the function.
@@ -29,7 +28,7 @@ const Scenario = ({ onClose, "data-testid": testId, header }: IScenarioProps) =>
     return null;
   }
 
-  // There is a wrapper around the modal to handle clicking on the outside of the modal. 
+  // There is a wrapper around the modal to handle clicking on the outside of the modal.
   return (
     <div
       className="modal-outer"

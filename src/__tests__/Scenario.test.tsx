@@ -8,8 +8,7 @@ import userEvent from "@testing-library/user-event";
  * Looking at the tests, we can see that there is a renderWithUser function that takes in the component as an input. This is similar to what render() from testing-library takes
  * so we can assume that it uses the render() function. It also returns a user object, that contains a click function. We can find userEvent in the user-event folder of
  * the testing-library. We instantiate the user and render the component, returning the user object.
- * @param ui - ReactNode component to render using the render() function 
- * @returns 
+ * @param ui - ReactNode component to render using the render() function
  */
 const renderWithUser = (ui: React.ReactNode) => {
   const user = userEvent.setup();

@@ -51,6 +51,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  z-index: 9999;
 }
 
 .modal-container {
@@ -62,6 +63,11 @@
   justify-content: center;
   padding: 2rem;
   cursor: default;
+  background: #F0EAD6;
+}
+
+.modal-header {
+  color: black;
 }
 
 .modal-close-button {

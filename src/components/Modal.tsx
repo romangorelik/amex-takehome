@@ -28,11 +28,11 @@ const Modal = ({ onClose, header = "Modal Header" }: IModalProps) => {
     return () => window.removeEventListener("keydown", close);
   }, [onClose]);
 
-  // Basic Modal structure with a container, a heading, and a close button. The container has an onClick which stops propogation due to how we created the 
+  // Basic Modal structure with a container, a heading, and a close button. The container has an onClick which stops propogation due to how we created the
   // onClick event on the parent container to close the modal when clicking outside.
   return (
     <div role="dialog" onClick={(e) => e.stopPropagation()} className="modal-container">
-      <div role="heading">{header}</div>
+      <div role="heading" className="modal-header">{header}</div>
       <button role="button" onClick={onClose} className="modal-close-button">
         Close
       </button>
