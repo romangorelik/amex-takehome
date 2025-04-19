@@ -3,9 +3,9 @@ import Modal from './Modal';
 
 interface IScenarioProps {
     onClose?: () => void;
-    "data-testId"?: string;
+    "data-testid"?: string;
 }
-const Scenario = ({ onClose, "data-testId": testId }: IScenarioProps) => {
+const Scenario = ({ onClose, "data-testid": testId }: IScenarioProps) => {
     const [open, setIsOpen] = useState(true)
 
     const handleClose = useCallback(() => {
@@ -18,7 +18,12 @@ const Scenario = ({ onClose, "data-testId": testId }: IScenarioProps) => {
     }
 
     return (
-        <Modal onClose={handleClose} testId={testId}/>
+        <div data-testid={testId} onClick={(e) => {
+            e.stopPropagation()
+            handleClose()
+        }}>
+            <Modal onClose={handleClose} />
+        </div>
     )
 }
 
