@@ -28,3 +28,6 @@ AssertionError: expected "spy" to be called 1 times, but got 2 times
  15. Create outer layer for modal, have it close when clicking on it. Stop propogation in the modal so that it does not bubble up.
  16. Add header field
  17. Add prettier with basic rules
+
+
+ // If more time than I will add husky to run prettier and ES lint on git hooks

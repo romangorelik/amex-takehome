@@ -4,7 +4,13 @@ import Scenario from "../components/Scenario";
 import "@testing-library/jest-dom/vitest";
 import userEvent from "@testing-library/user-event";
 
-// Instantiate a user and render the UI. Return the user as property in an object to destructure in the test
+/**
+ * Looking at the tests, we can see that there is a renderWithUser function that takes in the component as an input. This is similar to what render() from testing-library takes
+ * so we can assume that it uses the render() function. It also returns a user object, that contains a click function. We can find userEvent in the user-event folder of
+ * the testing-library. We instantiate the user and render the component, returning the user object.
+ * @param ui - ReactNode component to render using the render() function 
+ * @returns 
+ */
 const renderWithUser = (ui: React.ReactNode) => {
   const user = userEvent.setup();
   render(ui);
