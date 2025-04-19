@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Scenario = () => {
+const Scenario = ({ onClose }: { onClose?: () => void }) => {
     return (
         <div>Hello World</div>
     )
