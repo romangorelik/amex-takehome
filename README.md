@@ -10,3 +10,9 @@ Steps:
 4. Create testing directory
 5. Create test file
 6. Create script to run tests
+7. Fix first part of test by importing vitest and react testing library
+8. Fix ``` Property 'toBeInTheDocument' does not exist on type 'Assertion<HTMLElement>'. ``` error
+  - Doing this without Babel, steps are:
+    - install @testing-library/jest-dom
+    - add to tsconfig.json file
+    - import ```@testing-library/jest-dom/vitest``` to test file

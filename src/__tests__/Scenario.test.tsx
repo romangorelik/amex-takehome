@@ -1,6 +1,7 @@
 import { describe, expect, test, vi, beforeAll } from 'vitest'
 import { render, screen, fireEvent  } from '@testing-library/react'
 import Scenario from '../components/Scenario';
+import '@testing-library/jest-dom/vitest'
 
 describe('Modal', () => {
     const mockClose = vi.fn();
