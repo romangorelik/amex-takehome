@@ -2,6 +2,15 @@ import { describe, expect, test, vi, beforeAll } from 'vitest'
 import { render, screen, fireEvent  } from '@testing-library/react'
 import Scenario from '../components/Scenario';
 import '@testing-library/jest-dom/vitest'
+import userEvent from '@testing-library/user-event'
+
+// Instantiate a user and render the UI. Return the user as property in an object to destructure in the test
+const renderWithUser = (ui: React.ReactNode) => {
+    const user = userEvent.setup()
+    render(ui)
+    
+    return { user }
+}
 
 describe('Modal', () => {
     const mockClose = vi.fn();

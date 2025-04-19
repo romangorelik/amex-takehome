@@ -16,3 +16,5 @@ Steps:
     - install @testing-library/jest-dom
     - add to tsconfig.json file
     - import ```@testing-library/jest-dom/vitest``` to test file
+9. Install @testing-library/user-event for user click events
+10. Create a renderWithUser function that renders the UI using the testinglibrary and returns a user from the userEvent library
