@@ -5,6 +5,7 @@ import Modal from "./Modal";
  * @param onClose - optional function with no return that will run when closing the modal
  * @param { data-testid } - optional string that can attach for testing
  * @param header - optional string that will serve as the Modal's heading
+ * @param children - optional children that can be passed down to the modal
  */
 interface IScenarioProps {
   onClose?: () => void;

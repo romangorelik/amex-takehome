@@ -3,6 +3,7 @@ import { useEffect } from "react";
 /**
  * @param onClose - function with no return that will close the modal
  * @param header - string that will serve as the Modal's heading
+ * @param children - optional children that can be passed down to the modal
  */
 interface IModalProps {
   onClose: () => void;
