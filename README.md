@@ -20,3 +20,4 @@ Steps:
 10. Create a renderWithUser function that renders the UI using the testinglibrary and returns a user from the userEvent library
 11. Create Scenario component that takes in an onClose function and a data-testId based on the tests written.
   - Create the open state, create a handleClose function to close modal and call onClose prop, put a null state when modal is closed
+12. Had a bug running toBeInTheDocument, where document was not defined. Research online said to update vite.config.ts with jsdom and install jsdom; now should be running correctly.
