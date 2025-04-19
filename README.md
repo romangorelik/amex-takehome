@@ -26,3 +26,4 @@ Steps:
 AssertionError: expected "spy" to be called 1 times, but got 2 times
  - Fix this by changing beforeAll to be beforeEach in the setup stage of the tests. It was returning 2 calls because we were not resetting state after the escape key call in the previous test
  15. Create outer layer for modal, have it close when clicking on it. Stop propogation in the modal so that it does not bubble up.
+ 16. Add header field
