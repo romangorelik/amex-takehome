@@ -23,11 +23,9 @@ const Modal = ({ onClose }: IModalProps) => {
     },[onClose])
 
     return (
-        <div role='dialog' style={{border: '1px solid red'}} onClick={(e) => e.stopPropagation()}>
-            <div>
-                <div role='heading'>Modal</div>
-                <button role='button' onClick={onClose}>Close</button>
-            </div>
+        <div role='dialog' onClick={(e) => e.stopPropagation()}>
+            <div role='heading'>Modal</div>
+            <button role='button' onClick={onClose}>Close</button>
         </div>
     )
 }
