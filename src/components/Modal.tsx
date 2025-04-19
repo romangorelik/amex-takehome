@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 
 interface IModalProps {
     onClose: () => void;
+    header?: string;
 }
 
 /**
@@ -9,7 +10,7 @@ interface IModalProps {
  * Renders modal with an onClose button that can also be triggered by the escape key
  * 
  */
-const Modal = ({ onClose }: IModalProps) => {
+const Modal = ({ onClose, header = 'Modal Header' }: IModalProps) => {
 
     useEffect(() => {
         const close = (e: KeyboardEvent) => {
@@ -24,7 +25,7 @@ const Modal = ({ onClose }: IModalProps) => {
 
     return (
         <div role='dialog' onClick={(e) => e.stopPropagation()} className='modal-container'>
-            <div role='heading'>Modal</div>
+            <div role='heading'>{header}</div>
             <button role='button' onClick={onClose} className='modal-close-button'>Close</button>
         </div>
     )
