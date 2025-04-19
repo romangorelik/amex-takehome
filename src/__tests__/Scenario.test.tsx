@@ -1,4 +1,4 @@
-import { describe, expect, test, vi, beforeAll } from 'vitest'
+import { describe, expect, test, vi, beforeEach } from 'vitest'
 import { render, screen, fireEvent  } from '@testing-library/react'
 import Scenario from '../components/Scenario';
 import '@testing-library/jest-dom/vitest'
@@ -15,7 +15,7 @@ const renderWithUser = (ui: React.ReactNode) => {
 describe('Modal', () => {
     const mockClose = vi.fn();
   
-    beforeAll(() => {
+    beforeEach(() => {
       mockClose.mockReset()
     });
   

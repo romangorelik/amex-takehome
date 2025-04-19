@@ -22,3 +22,7 @@ Steps:
   - Create the open state, create a handleClose function to close modal and call onClose prop, put a null state when modal is closed
 12. Had a bug running toBeInTheDocument, where document was not defined. Research online said to update vite.config.ts with jsdom and install jsdom; now should be running correctly.
 13. Add escape key connection to onClose function, however it seems to have broken test #3 where it was working before that change
+14.  FAIL  src/__tests__/Scenario.test.tsx > Modal > when passed onClose handler > renders dismissible button that calls onClose action when clicked
+AssertionError: expected "spy" to be called 1 times, but got 2 times
+ - Fix this by changing beforeAll to be beforeEach in the setup stage of the tests. It was returning 2 calls because we were not resetting state after the escape key call in the previous test
+ 
