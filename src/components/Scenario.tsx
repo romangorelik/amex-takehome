@@ -10,9 +10,10 @@ interface IScenarioProps {
   onClose?: () => void;
   "data-testid"?: string;
   header?: string;
+  children?: React.ReactNode
 }
 
-const Scenario = ({ onClose, "data-testid": testId, header }: IScenarioProps) => {
+const Scenario = ({ onClose, "data-testid": testId, header, children }: IScenarioProps) => {
   // Need a state to know when the Modal is closed or open. Determines if modal is rendered or not. Default state is true
   const [open, setIsOpen] = useState(true);
 
@@ -38,7 +39,7 @@ const Scenario = ({ onClose, "data-testid": testId, header }: IScenarioProps) =>
         handleClose();
       }}
     >
-      <Modal onClose={handleClose} header={header} />
+      <Modal onClose={handleClose} header={header} children={children}/>
     </div>
   );
 };

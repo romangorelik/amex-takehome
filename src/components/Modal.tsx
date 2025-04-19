@@ -7,13 +7,14 @@ import { useEffect } from "react";
 interface IModalProps {
   onClose: () => void;
   header?: string;
+  children?: React.ReactNode;
 }
 
 /**
  * Modal component
  * Renders modal with an onClose button that can also be triggered by the escape key
  */
-const Modal = ({ onClose, header = "Modal Header" }: IModalProps) => {
+const Modal = ({ onClose, header = "Modal Header", children }: IModalProps) => {
   // Create a sideeffect after rendering that will attach the escape key to the onClose function
   useEffect(() => {
     const close = (e: KeyboardEvent) => {
@@ -32,7 +33,10 @@ const Modal = ({ onClose, header = "Modal Header" }: IModalProps) => {
   // onClick event on the parent container to close the modal when clicking outside.
   return (
     <div role="dialog" onClick={(e) => e.stopPropagation()} className="modal-container">
-      <div role="heading" className="modal-header">{header}</div>
+      <div role="heading" className="modal-header">
+        {header}
+      </div>
+      {children && children}
       <button role="button" onClick={onClose} className="modal-close-button">
         Close
       </button>
