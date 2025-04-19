@@ -23,9 +23,9 @@ const Modal = ({ onClose }: IModalProps) => {
     },[onClose])
 
     return (
-        <div role='dialog' onClick={(e) => e.stopPropagation()}>
+        <div role='dialog' onClick={(e) => e.stopPropagation()} className='modal-container'>
             <div role='heading'>Modal</div>
-            <button role='button' onClick={onClose}>Close</button>
+            <button role='button' onClick={onClose} className='modal-close-button'>Close</button>
         </div>
     )
 }

@@ -40,3 +40,33 @@
 .read-the-docs {
   color: #888;
 }
+
+.modal-outer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.modal-container {
+  width: 50vw;
+  height: 50vh;
+  border: 1px solid black;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding: 2rem;
+  cursor: default;
+}
+
+.modal-close-button {
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}

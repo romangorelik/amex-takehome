@@ -18,7 +18,7 @@ const Scenario = ({ onClose, "data-testid": testId }: IScenarioProps) => {
     }
 
     return (
-        <div data-testid={testId} onClick={(e) => {
+        <div className='modal-outer' data-testid={testId} onClick={(e) => {
             e.stopPropagation()
             handleClose()
         }}>
