@@ -18,3 +18,5 @@ Steps:
     - import ```@testing-library/jest-dom/vitest``` to test file
 9. Install @testing-library/user-event for user click events
 10. Create a renderWithUser function that renders the UI using the testinglibrary and returns a user from the userEvent library
+11. Create Scenario component that takes in an onClose function and a data-testId based on the tests written.
+  - Create the open state, create a handleClose function to close modal and call onClose prop, put a null state when modal is closed
