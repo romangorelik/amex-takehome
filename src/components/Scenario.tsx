@@ -18,7 +18,7 @@ const Scenario = ({ onClose, "data-testId": testId }: IScenarioProps) => {
     }
 
     return (
-        <Modal open={open} onClose={handleClose} testId={testId}/>
+        <Modal onClose={handleClose} testId={testId}/>
     )
 }
 

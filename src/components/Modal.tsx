@@ -1,11 +1,27 @@
-
+import { useEffect } from 'react'
 
 interface IModalProps {
-    open: boolean;
     onClose: () => void;
     testId?: string;
 }
-const Modal = ({ open, onClose, testId }: IModalProps) => {
+
+/**
+ * Modal component
+ * Renders modal with an onClose button that can also be triggered by the escape key
+ * 
+ */
+const Modal = ({ onClose, testId }: IModalProps) => {
+
+    useEffect(() => {
+        const close = (e: KeyboardEvent) => {
+            if(e.key === 'Escape'){
+            onClose()
+            }
+        }
+
+        window.addEventListener('keydown', close)
+        return () => window.removeEventListener('keydown', close)
+    },[onClose])
 
     return (
         <div role='dialog'>
